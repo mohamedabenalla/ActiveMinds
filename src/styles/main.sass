@@ -1,0 +1,213 @@
+$navbar-background-color: transparent
+$navbar-item-hover-background-color: #001a47
+$primary: #002c77
+$warning: #ebebeb
+$danger: #f2f2f2
+$navbar-height: 4rem
+$footer-background-color: $primary
+$footer-padding: 0.5rem
+.is-fullheight-with-navbar
+    min-height: calc(100vh - ( #{$navbar-height}) )
+    max-height: calc(100vh - ( #{$navbar-height}) )
+    height: calc(100vh - ( #{$navbar-height}) )
+.carousel
+    overflow: hidden !important
+@import ~bulma/bulma.sass
+@import ~bulma-carousel/src/sass/index.sass
+.body
+    font-family: 'Montserrat', sans-serif
+.backgroundimage:before
+    content: ""
+    background-image: url('/images/example.png')
+    position: absolute
+    top: 0px
+    right: 0px
+    bottom: 0px
+    left: 0px
+    opacity: 0.5
+.hero-header
+  padding-top: 4rem
+  @media (max-width: $navbar-breakpoint) 
+    padding:0px
+
+
+
+.background
+    background-color: #002c77
+.navbar-item img 
+    //image resizing for the nav bar
+    max-height: 1.9rem
+.center
+    display: flex
+    justify-content: center
+    text-align: center
+
+.slider-navigation-previous, .slider-navigation-next
+    OPACITY: 0.8
+.carousel
+    width: 25rem
+    border: 0px
+    border-color: white
+    height: -moz-available
+    height: -webkit-fill-available
+    @media (min-width: $navbar-breakpoint) 
+      width: 35rem
+
+.slider-navigation-previous
+  margin-right: -100px
+h1
+    font-family: 'Noto Sans', sans-serif
+    font-size: 2.7rem
+    font-weight: 600
+    
+    &.large
+      font-size: 5rem
+
+p
+    font-family: 'Noto Sans', sans-serif
+    font-size: 1.3rem
+    font-weight: 600
+    &.small
+      font-size: 1rem
+.listcontainer
+  display: block
+  justify-content: center
+  text-align: center
+  @media (min-width: $navbar-breakpoint) 
+    display: flex
+  .list
+    width: 100%
+    @media (min-width: $navbar-breakpoint) 
+      width: 50%
+      margin: 2rem
+    .content
+      margin: 1rem
+      padding: 10px
+      border: 0px
+      background-color: rgba(225,225,225,.7)
+      @media (min-width: $navbar-breakpoint) 
+        margin: 2rem
+
+.resource
+  padding: 1rem
+  width: 85%
+  background-size: cover
+  background-position: center
+  background-color: rgba(0,44,119)
+  border-radius: 4px
+.resource:hover
+  transform: scale(1.05)
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.33)
+.infodisplay
+  background-size: cover
+  background-position: center
+  text-align: center
+
+  .contact-container 
+    padding: 85px 16px
+    border: 0px
+    background-color: rgba(255,255,255,.65)
+    
+  
+
+  .contact
+    display: inline-flex
+    align-items: center
+    position: relative
+    width: 300px
+    height: 300px
+    border-radius: 50%
+    background-color: rgba(255, 255, 255, .87)
+    padding: 30px
+    vertical-align: middle
+    @media (min-width: $navbar-breakpoint) 
+      &.small 
+        width: 200px
+        height: 200px
+
+    > div 
+      width: 100%
+    
+      
+    
+
+    h2 
+      color: $primary
+      font-family: 'Noto Sans', sans-serif
+      font-size: 2.7rem
+      font-weight: 600
+
+      &.small
+        font-size: 1rem
+      
+      &.large
+        font-size: 4.5rem
+      
+
+      span 
+        display: block
+        color: #ffb60f
+        font-family: 'Zilla Slab', serif
+        font-weight: 600
+        font-style: italic
+        font-size: 29px
+        margin-top: -20px
+        @media (min-width: $navbar-breakpoint) 
+          &.small
+            font-size: 1rem
+
+      
+    
+
+    p 
+      color: #404040
+      font-family: 'Noto Sans', sans-serif
+      margin-top: 5px
+      font-weight: bold
+      line-height: 1.15em
+    
+
+    &:first-child 
+      @media (min-width: $navbar-breakpoint) 
+        margin-right: -45px
+    
+
+      
+    
+
+    &:nth-child(2) 
+      background-color: rgba(0, 52, 121, .85)
+      z-index: 2
+
+      h2 
+        color: $white
+      
+
+      p 
+        color: $white
+      
+    
+
+    &:last-child 
+      @media (min-width: $navbar-breakpoint) 
+        margin-left: -45px
+        z-index: 1
+.contact:hover
+  transform: scale(1.05)
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.33)    
+    
+  
+
+@media (min-width: $navbar-breakpoint) 
+    .textsection
+        width: 50%
+
+@media (max-width: $navbar-breakpoint) 
+    .navbar-item img 
+        //image resizing for the nav bar
+        max-height: 2.7rem
+    .carousel
+        width: -webkit-fill-available
+        height: -moz-available
+        height: -webkit-fill-available
+        border: 0px

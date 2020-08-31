@@ -1,0 +1,17 @@
+nav.is-primary.navbar(role='navigation' aria-label='main navigation')
+  .navbar-brand
+    a.navbar-item(href='/')
+        img(src='images/chslogo.png')
+    a.navbar-burger.burger(role='button' aria-label='menu' aria-expanded='false' data-target='navbar')
+        span(aria-hidden='true')
+        span(aria-hidden='true')
+        span(aria-hidden='true')
+  #navbar.navbar-menu
+   
+    .navbar-end
+        .navbar-item
+            each link in links
+                if link === 'About Us'
+                  a.navbar-item(href='/index#AboutUs' class={'is-active': page === link} style='font-size: 1.5rem; padding-top: 10px; padding-right: 25px; color: white') #{link}
+                else
+                  a.has-text-white.navbar-item(href='/index#'+link class={'is-active': page === link} style='font-size: 1.5rem; padding-top: 10px; padding-right: 25px') #{link}

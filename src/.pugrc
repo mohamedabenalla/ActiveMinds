@@ -1,0 +1,8 @@
+{
+    pretty: true,
+    locals: {
+        title: "Centennial HS Active Minds",
+        links: ["About Us", "Info", "Resources", "Calendar", "Contact"],
+        clubphotos: ["clubphotos/clubphoto1.jpg", "clubphotos/clubphoto2.jpg", "clubphotos/clubphoto3.jpg", "clubphotos/clubphoto4.jpg"]
+    }
+}

@@ -1,0 +1,176 @@
+extends templates/page.pug
+
+block prepend header
+  - let about = "About"
+
+
+block content
+    section.hero.is-fullheight-with-navbar.backgroundimage
+        .hero-body.center.is-transparent
+            figure.image
+              img(src='images/logobanner.png' style='width: 35rem')
+        section.center(style='padding-bottom: 3rem')
+          figure.image.is-64x64
+            // from https://materialdesignicons.com/icon/menu-down
+            img(src='images/menu-down.png').animate__animated.animate__fadeOutDown.animate__infinite
+block morecontent
+    section#AboutUs.hero.is-fullheight.is-danger.tophero
+          .hero-header.center
+            h1.has-text-primary About Centennial Active Minds
+          .hero-body(style='padding: 0.5rem; display:block;')
+            .center 
+              #carousel.carousel
+                each clubphoto in clubphotos
+                  figure.image
+                    img(style= 'object-fit: cover; height: auto; width: 100%;' src='images/' + clubphoto)
+              script(src= 'https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js')
+            .center.py-5
+              p.has-text-black.textsection Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, ut excepturi? Iste possimus, aspernatur dolorem iure eum natus aliquid commodi delectus ipsa facilis fuga cupiditate modi tempora aut porro praesentium!
+    section#Info.hero.is-fullheight.is-warning      
+        .hero-header
+          .center
+            h1.has-text-primary Mental Health
+          .center
+            p.has-text-black.textsection Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, ut excepturi? Iste possimus! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        .hero-body.center(style='display: block; width: 100%;')
+          .columns.is-multiline
+            .column.is-half
+              h1.has-text-primary Prevention
+              .listcontainer
+                .list
+                  p.strong Recognizing Warning Signs
+                  .content
+                     dl(type='I')
+                      li Too much sleep or trouble sleeping
+                      li Trouble focusing or having racing thoughts
+                      li Changes in appetite
+                      li Isolating yourself from others
+                      li Irritability or having a short temper
+                      li Feeling excessively sad or low
+                      li Extreme/Excessive mood changes
+                      li Losing interest in things you once enjoyed
+                .list
+                  p.strong Maintaining Mental Health
+                  div.list
+                  .content
+                    dl(type='I')
+                      li Practicing Mindfulness
+                      li Connecting with others
+                      li Having a positive outlook on stress
+                      li Having a healthy diet and regular exercise
+                      li Avoiding drug use
+                      li Getting 8-10 hours of sleep per night
+                      li Using time management to reduce stress
+                      li Seeking Professionial Help if needed
+            .column.is-half
+              h1.has-text-primary Risk Factors
+              .center
+                figure.image.center
+                  //https://www.mhanational.org/infographic-b4stage4-changing-way-we-think-about-mental-health
+                  img(src='images/graphs/riskgraph.png' style='width: 40rem;')
+            .column.is-half
+              h1.has-text-primary Statistics
+              p.strong.py-4 20% of children and adolescents with diagnosable mental health problems recieve the treatment they need
+              .infodisplay.py-5
+                .contact.small
+                  div
+                    h2.strong 20% 
+                      span.small of adolescents
+                      h2.small with mental health problems recieve the treatment they need 
+                .contact.small
+                  div
+                    h2.strong 50% 
+                      span.small of cases
+                      h2.small of mental health issues begin by age 14
+                .contact.small
+                  div
+                    h2.strong 2/3
+                      span.small of students
+                      h2.small with anxiety or depression don't seek treatment
+            .column.is-half
+                h1.has-text-primary Getting Help
+                p.has-text-primary Hotlines
+                p.small Text HELP to 741741
+                p.small Call 410-531-6677
+                p.has-text-primary School Counselors
+                p.small Jennifer McKechnie (A-Co)  
+                  a(href='mailto:jennifer_mckechnie@hcpss.org') jennifer_mckechnie@hcpss.org
+                p.small Todd Kriner (Cp-H)  
+                  a(href='mailto:todd_kriner@hcpss.org') todd_kriner@hcpss.org
+                p.small JaeHi Hebler (I-Mc)  
+                  a(href='mailto:jaehi_hebler@hcpss.org') jaehi_hebler@hcpss.org
+                p.small Chris Sanders (Md-Sg) 
+                  a(href='mailto:christian_sanders@hcpss.org') christian_sanders@hcpss.org
+                p.small Irene Khaksari (Sh-Z)  
+                  a(href='mailto:irene_khaksari@hcpss.org') irene_khaksari@hcpss.org
+                p.has-text-primary School Psychologist
+                p.small Stacy Rosuck 
+                  a(href='mailto:stacy_rosuck@hcpss.org') stacy_rosuck@hcpss.org
+    section#Resources.hero.is-danger
+        .hero-header
+          .center
+            h1.has-text-primary Resources
+          .center
+            p.has-text-black.textsection Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, ut excepturi? Iste possimus! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        .hero-body.center
+          .columns.is-multiline
+            .column.is-one-quarter.center
+              .resource
+                a(href='https://drive.google.com/drive/folders/1xqCGxOvsPg__avWVlzvuHp1XmxdzuHlj?usp=sharing')
+                  figure.image(width='100%').is-square
+                    img(src='images/clubphotos/googledrivepicture.png' style='width: 100%')
+                  p.has-text-white Club Resources on Google Drive
+            .column.is-one-quarter.center
+              .resource
+                a(href='https://www.activeminds.org/')
+                  figure.image(width='100%').is-square
+                    img(src='https://www.activeminds.org/wp-content/uploads/2018/07/chapters_wheel_580x580-250x250.png' style='width: 100%')
+                  p.has-text-white Active Minds Organization Website
+            .column.is-one-quarter.center
+              .resource
+                a(href='https://www.howardcountymd.gov/gethelp')
+                  figure.image(width='100%').is-square
+                    img(src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRWYG3g9uAd2pViDftcA3u714h_M5BL_0zdRg&usqp=CAU' style='width: 100%')
+                  p.has-text-white Howard County Health Department
+            .column.is-one-quarter.center
+              .resource
+                a(href='https://grassrootscrisis.org/')
+                  figure.image(width='100%').is-square
+                    img(src='https://317wm01n0fjo32b60v48opzv18xq-wpengine.netdna-ssl.com/wp-content/uploads/sites/8/2020/03/GrassrootsSquare-Featured.jpg' style='width: 100%')
+                  p.has-text-white Grassroots Intervention Center
+    section#Calendar.hero.is-warning
+        .hero-header.center
+            h1.has-text-primary The Calendar
+        .hero-body.center
+          iframe(src='https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23a6b5d0&ctz=America%2FNew_York&src=MWdtbGxmNm50bWxlMXNsdTF1Z2FsczByNjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%233F51B5&showTitle=1&mode=MONTH&showNav=1&showTabs=0&showTz=0&showCalendars=0&showPrint=0&showDate=1&title=Active%20Minds%20Calendar' style='border:solid 1px #777' width='800' height='600' frameborder='0' scrolling='no')
+    section#Contact.hero.is-danger(style='background-image: url(https://images-na.ssl-images-amazon.com/images/I/81LMMhH4xML._AC_SL1181_.jpg);')
+        .hero-body
+          .infodisplay(style='width: 100%;')
+            .contact-container
+              h1.has-text-primary Contact Us
+              div
+                .contact.animated
+                  div 
+                    a(href='https://www.instagram.com/chsactiveminds/')
+                      h2 Instagram
+                      .center
+                        figure.image.is-96x96
+                          img(src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png')
+                      h2.small @chsactiveminds
+                .contact
+                  div
+                    a(href='mailto:chsactiveminds@gmail.com')
+                      h2 Email
+                      .center
+                        figure.image.is-96x96
+                          img(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Gmail_Icon.svg/1200px-Gmail_Icon.svg.png')
+                      h2.small chsactiveminds@gmail.com
+                .contact
+                  div
+                    a(href='')
+                      h2 Facebook
+                      .center
+                        figure.image.is-96x96
+                          img(src='https://www.freepnglogos.com/uploads/facebook-icons/facebook-icon-transparent-background-3.png')
+                      h2.small Centennial Active Minds
+                
